@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wanderly — Путешествия & Туры</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader" aria-hidden="true"><div class="loader"></div></div>
+
+  <!-- PROGRESS BAR -->
+  <div id="progress-bar" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="container header-inner">
+      <div class="logo">Wanderly</div>
+      <nav id="main-nav" class="nav">
+        <a href="#home">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="#tours">Туры</a>
+        <a href="#stats">Достижения</a>
+        <a href="#faq">FAQ</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <button id="burger" class="burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- HERO (parallax + typewriter) -->
+    <section id="home" class="hero" data-speed="0.35" aria-label="Главный экран">
+      <div class="overlay"></div>
+      <div class="container hero-inner">
+        <h1 class="hero-title"><span id="typewriter" class="typewriter"></span></h1>
+        <p class="hero-sub">Открой мир с Wanderly — тщательно подобранные маршруты, безопасные поездки и яркие истории.</p>
+        <div class="hero-cta">
+          <button class="btn ripple scroll-btn" data-target="#tours">Посмотреть туры</button>
+          <button class="btn outline ripple scroll-btn" data-target="#contact">Связаться</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>О нас</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p><strong>Wanderly</strong> — независимое агентство, которое с 2016 года организует безопасные, интересные и экологичные путешествия по всему миру. Наша миссия — помочь людям получать подлинные впечатления, не нарушая местные экосистемы и культуру.</p>
+            <ul class="features">
+              <li>Персонализированные маршруты</li>
+              <li>Опытные гиды и локальные партнёры</li>
+              <li>Поддержка 24/7</li>
+            </ul>
+          </div>
+          <div class="about-media reveal">
+            <img src="img/beach.webp" alt="Путешествие на берегу" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOURS -->
+    <section id="tours" class="section tours">
+      <div class="container">
+        <h2>Популярные туры</h2>
+
+        <div class="tours-grid">
+          <article class="tour-card tilt reveal">
+            <img src="img/switzierland.webp" alt="Швейцарские Альпы" />
+            <div class="tour-body">
+              <h3>Альпы, Швейцария</h3>
+              <p>7 дней • походы, озёра, шале</p>
+              <div class="tour-footer">
+                <span class="price">от $1,800</span>
+                <button class="btn small ripple" data-open-tour="alps">Подробнее</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card tilt reveal">
+            <img src="img/indonesia.webp" alt="Пляжи Бали" />
+            <div class="tour-body">
+              <h3>Бали, Индонезия</h3>
+              <p>8 дней • пляж, серф, йога</p>
+              <div class="tour-footer">
+                <span class="price">от $1,300</span>
+                <button class="btn small ripple" data-open-tour="bali">Подробнее</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card tilt reveal">
+            <img src="img/japan.webp" alt="Город в Японии" />
+            <div class="tour-body">
+              <h3>Токио & Киото, Япония</h3>
+              <p>9 дней • культура, еда, храмы</p>
+              <div class="tour-footer">
+                <span class="price">от $1,600</span>
+                <button class="btn small ripple" data-open-tour="japan">Подробнее</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card tilt reveal">
+            <img src="img/maldives.webp" alt="Мальдивы бассейн" />
+            <div class="tour-body">
+              <h3>Мальдивы</h3>
+              <p>6 дней • люкс, дайвинг</p>
+              <div class="tour-footer">
+                <span class="price">от $2,100</span>
+                <button class="btn small ripple" data-open-tour="maldives">Подробнее</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="mt-40">Галерея туров</h3>
+        <div class="photo-carousel" id="photoCarousel" aria-roledescription="carousel">
+          <button class="carousel-btn prev" aria-label="Предыдущий">‹</button>
+          <div class="carousel-track">
+            <div class="carousel-item"><img src="img/north.webp" alt="Северное сияние"/></div>
+            <div class="carousel-item"><img src="img/sands.webp" alt="Песчаные дюны"/></div>
+            <div class="carousel-item"><img src="img/city.webp" alt="Городской пейзаж"/></div>
+            <div class="carousel-item"><img src="img/tropical.webp" alt="Тропический лес"/></div>
+          </div>
+          <button class="carousel-btn next" aria-label="Следующий">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section id="stats" class="section stats">
+      <div class="container">
+        <h2>Достижения</h2>
+        <div class="stats-grid">
+          <div class="stat reveal">
+            <span class="num counter" data-target="1200">0</span>
+            <p>Довольных клиентов</p>
+          </div>
+          <div class="stat reveal">
+            <span class="num counter" data-target="420">0</span>
+            <p>Туров в каталоге</p>
+          </div>
+          <div class="stat reveal">
+            <span class="num counter" data-target="85">0</span>
+            <p>Стран в маршрутах</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq">
+      <div class="container">
+        <h2>Вопросы и ответы</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">Как забронировать тур?</button>
+            <div class="accordion-content"><p>Выберите тур на странице, нажмите «Подробнее» и отправьте заявку — наш менеджер свяжется с вами в течение 24 часов.</p></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Как оплатить?</button>
+            <div class="accordion-content"><p>Мы принимаем банковские карты, перевод и онлайн-оплату через защищённый платежный шлюз.</p></div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">Есть ли страхование?</button>
+            <div class="accordion-content"><p>Да — при оформлении можно добавить медицинскую страховку и страховку отмены.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section reviews">
+      <div class="container">
+        <h2>Отзывы блогеров и путешественников</h2>
+        <div class="testimonials" id="testimonials">
+          <div class="testimonial active reveal">
+            <img src="https://i.pravatar.cc/120?img=12" alt="Анна" />
+            <p class="quote">«С Wanderly я наконец-то увидел те места, о которых мечтал — всё было продумано до мелочей»</p>
+            <p class="author">— Джон (@john_travel)</p>
+          </div>
+          <div class="testimonial reveal">
+            <img src="https://i.pravatar.cc/120?img=5" alt="Алекс" />
+            <p class="quote">«Маршрут — супер, какие виды! Рекомендую всем любителям активного отдыха»</p>
+            <p class="author">— Мария (@maria_wanders)</p>
+          </div>
+          <div class="testimonial reveal">
+            <img src="https://i.pravatar.cc/120?img=8" alt="Мария" />
+            <p class="quote">«Команда заботится о деталях. Дети были в восторге от программы»</p>
+            <p class="author">— Алекс (@alex_trips)</p>
+          </div>
+        </div>
+        <div class="test-controls">
+          <button id="testPrev">&lt;</button>
+          <button id="testNext">&gt;</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section team">
+      <div class="container">
+        <h2>Наша команда & партнёры</h2>
+        <div class="team-grid">
+          <div class="member reveal tilt">
+            <img src="https://i.pravatar.cc/140?img=11" alt="Игорь" />
+            <h4>Игорь</h4>
+            <p>SEO & Ops</p>
+          </div>
+          <div class="member reveal tilt">
+            <img src="https://i.pravatar.cc/140?img=14" alt="Джек" />
+            <h4>Джек</h4>
+            <p>Менеджер туров</p>
+          </div>
+          <div class="member reveal tilt">
+            <img src="https://i.pravatar.cc/140?img=16" alt="Аманда" />
+            <h4>Аманда</h4>
+            <p>Гид-координатор</p>
+          </div>
+        </div>
+
+        <div class="partners reveal">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Partner Google" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Partner MS" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Partner Netflix" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Контакты</h2>
+        <div class="contact-grid">
+          <form id="contactForm" class="contact-form reveal">
+            <input name="name" placeholder="Имя" required />
+            <input name="email" type="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Сообщение" required></textarea>
+            <div class="form-actions">
+              <button type="submit" class="btn ripple">Отправить</button>
+              <button type="button" class="btn outline ripple" id="openChat">Чат</button>
+            </div>
+          </form>
+          <div class="contact-info reveal">
+            <h3>Контактная информация</h3>
+            <p>📍 Адрес: улица Туристическая, 12, Алматы, Казахстан</p>
+            <p>📞 Телефон: +7 (700) 000-0000</p>
+            <p>✉️ Email: hello@wanderly.example</p>
+            <iframe src="https://maps.google.com/maps?q=Almaty&t=&z=12&ie=UTF8&iwloc=&output=embed" aria-label="Карта" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2025 Wanderly • Сделано с любовью</div>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Telegram">TG</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal" role="dialog" aria-hidden="true">
+    <div class="modal-panel">
+      <button id="closeModal" class="modal-close" aria-label="Закрыть">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
